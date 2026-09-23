@@ -1,0 +1,99 @@
+{
+  "environment": {
+    "operating_system": "Linux",
+    "python_version": "3.13.5",
+    "python_executable": "/home/debian/Рабочий стол/Все лабы/lab_2/.venv/bin/python",
+    "available_start_methods": [
+      "fork",
+      "spawn",
+      "forkserver"
+    ]
+  },
+  "experiment": {
+    "limit": 300000,
+    "repeats": 5,
+    "worker_counts": [
+      1,
+      2,
+      4
+    ],
+    "required_start_method": "spawn"
+  },
+  "expected_result": {
+    "count": 25997,
+    "max_prime": 299993,
+    "checksum": 709507093
+  },
+  "sequential": {
+    "durations_seconds": [
+      0.2804347169999346,
+      0.27939654699991934,
+      0.27999396200004867,
+      0.2799729760000673,
+      0.27894173199990746
+    ],
+    "median_seconds": 0.2799729760000673,
+    "result_matches_expected": true
+  },
+  "process_runs": [
+    {
+      "start_method": "spawn",
+      "workers": 1,
+      "durations_seconds": [
+        0.36207027700004346,
+        0.321981744000027,
+        0.31974860000002536,
+        0.31781015199999274,
+        0.3161572610000576
+      ],
+      "median_seconds": 0.31974860000002536,
+      "speedup": 0.8756034459573713,
+      "efficiency": 0.8756034459573713,
+      "result_matches_sequential": true
+    },
+    {
+      "start_method": "spawn",
+      "workers": 2,
+      "durations_seconds": [
+        0.2243448610000769,
+        0.21543614999995953,
+        0.22088984499998787,
+        0.21222445499995501,
+        0.21097179900004903
+      ],
+      "median_seconds": 0.21543614999995953,
+      "speedup": 1.2995635876342941,
+      "efficiency": 0.6497817938171471,
+      "result_matches_sequential": true
+    },
+    {
+      "start_method": "spawn",
+      "workers": 4,
+      "durations_seconds": [
+        0.14686325299999226,
+        0.1490042220000305,
+        0.1533953460000248,
+        0.1477360190000354,
+        0.16218313199999557
+      ],
+      "median_seconds": 0.1490042220000305,
+      "speedup": 1.8789600203409673,
+      "efficiency": 0.46974000508524183,
+      "result_matches_sequential": true
+    }
+  ],
+  "fork_run": {
+    "status": "completed",
+    "workers": 4,
+    "durations_seconds": [
+      0.09902717600004962,
+      0.09963826700004574,
+      0.11102035999999771,
+      0.1011412799999789,
+      0.10204485999997814
+    ],
+    "median_seconds": 0.1011412799999789,
+    "fork_to_spawn_ratio": 0.6787813032570191,
+    "result_matches_sequential": true
+  }
+}
